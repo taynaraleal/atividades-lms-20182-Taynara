@@ -1,0 +1,56 @@
+body{
+    margin: 0;
+}
+
+h2{
+    font-size: 40px;
+    background-color: #2FFFF1;
+    color: #3B4CFF;
+    text-align: center;
+}
+
+h3{
+    font-size: 30px;
+    color: #F02FFF;
+    background-color: aliceblue;
+    margin: 0 0;
+}
+        
+.cabecalho-principal{
+    height:3cm;
+    width: 100%;
+    background-image: url(background.png);
+}
+.titulo-principal{
+    margin-top: 0;
+    color:#3b4cff;
+    font-size: 60px;
+    text-align: center;
+}
+
+#img-1, #img-2, #img-3{
+    height: 300px;
+    width: 33.3%;
+    float: left;
+    overflow: hidden;
+}
+
+.navegador{
+    height: 1cm;
+    width: 33.3%;
+    background-image: url(background.png);
+    text-align: center;
+    float: left;
+    overflow: hidden;
+}
+
+.minha-classe{
+    font-size: 15px;
+    color: #3B4CFF;
+    text-align: center;
+}
+
+.estilo-article{
+    background-color: #F02FFF;
+}
+
