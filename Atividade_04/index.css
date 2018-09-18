@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: white;
+}
+
+.header-fixo-superior{
+    padding: 8px 15px;
+    width: auto;
+    height: 50px;
+}
+img{
+    width: 260px;
+    height: 40;
+    margin-top: 10px;
+}
+
+.txt-header{
+    position: relative;
+    bottom: 30px;
+    text-align: right;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 4px;
+    font-size: 15px;
+    color: #000;
+}
+
+.navegador-horizontal{
+    overflow: auto;
+    background-color: #4CAF50;
+    box-shadow: 0 2px  #bdbbbb;
+}
+
+.navegador-horizontal ul{
+    list-style: none;
+}
+
+.navegador-horizontal>ul>li>a, .dropdown .dropdown-button{
+    display: block;
+    color: white;
+    padding: 10px;
+    float: left;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 4px;
+    cursor: pointer;
+}
+
+.navegador-horizontal>ul>li>a:hover, .dropdown .dropdown-button:hover{
+    background-color: white;
+    color:black;
+}
+
+.dropdown{
+    float: left;
+}
+
+.dropdown-content{
+    position: absolute;
+    background-color: #ddd;
+    width: 300px;
+    display: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.dropdown .dropdown-button{
+    float: none;
+}
+
+.dropdown-content>ul{
+    list-style: none;
+}
+
+.dropdown-content>ul>li>a {
+    display: block;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown-content>ul>li>a:hover{
+    background-color: #ccc;
+}
+
+.navegador-lateral{
+    height: 200vh;
+    width: 200px;
+    float: left;
+    box-shadow: 0 2px 3px #bdbbbb;
+}
+
+.navegador-lateral>div>ul{
+    list-style: none;
+}
+
+.navegador-lateral>div>ul>li>a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 0 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.navegador-lateral>div>ul>li>a:hover{
+    background-color: #bdbbbb;
+}
+
+nav p{
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    
+}
