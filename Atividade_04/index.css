@@ -39,6 +39,7 @@ img{
 
 .navegador-horizontal>ul>li>a, .dropdown .dropdown-button{
     display: block;
+    text-decoration: none;
     color: white;
     padding: 10px;
     float: left;
