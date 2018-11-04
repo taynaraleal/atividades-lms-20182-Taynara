@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 5</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <nav class="menu-lateral">
+        <ul>
+            <li><a href="">Link 1</a></li>
+            <li><a href="">Link 2</a></li>
+            <li><a href="">Link 3</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <button class="menu-sanduiche">&#9776</button>
+        <h1>Título</h1>
+    </header>
+    <nav class="menu-acordeon">
+        <div class="acordeon">
+            <span class="itens">Item 1</span>
+            <ul class="conteudo">
+                <li> Conteúdo aqui Conteúdo aqui Conteúdo aqui Conteúdo aqui Conteúdo aqui
+                    Conteúdo aqui Conteúdo aqui Conteúdo aqui Conteúdo aqui Conteúdo aqui
+                    Conteúdo aqui Conteúdo aqui Conteúdo aqui Conteúdo aqui Conteúdo aqui
+                </li>
+            </ul>
+        </div>
+        <div class="acordeon">
+            <span class="itens">Item 2</span>
+            <ul class="conteudo">
+                <li> Conteúdo aqui Conteúdo aqui Conteúdo aqui Conteúdo aqui Conteúdo aqui
+                    Conteúdo aqui Conteúdo aqui Conteúdo aqui Conteúdo aqui Conteúdo aqui
+                    Conteúdo aqui Conteúdo aqui Conteúdo aqui Conteúdo aqui Conteúdo aqui
+                </li>
+            </ul>
+        </div>
+        <div class="acordeon">
+            <span class="itens">Item 3</span>
+            <ul class="conteudo">
+                <li> Conteúdo aqui Conteúdo aqui Conteúdo aqui Conteúdo aqui Conteúdo aqui
+                    Conteúdo aqui Conteúdo aqui Conteúdo aqui Conteúdo aqui Conteúdo aqui
+                    Conteúdo aqui Conteúdo aqui Conteúdo aqui Conteúdo aqui Conteúdo aqui
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <script>
+        let menuSanduiche = document.querySelector(".menu-sanduiche");
+        let menuLateral = document.querySelector(".menu-lateral");
+
+        menuSanduiche.addEventListener("click", function () {
+            menuLateral.classList.toggle("ativo");
+            menuAcordeon.classList.toggle("ativo");
+
+        });
+
+        function abrirMenu() {
+            menuAcordeon.style.transform = "translateX(200px)"
+            menuLateral.style.transform = "translateX(0px)";
+        };
+
+        let itensAcordeon = document.querySelectorAll(".itens");
+        let conteudoAcordeon = document.querySelectorAll(".acordeon .conteudo");
+
+        for (let i = 0; i < itensAcordeon.length; i++) {
+            itensAcordeon[i].addEventListener("click", function () {
+                if (conteudoAcordeon[i].classList.contains("ativo")) {
+                    conteudoAcordeon[i].classList.remove("ativo");
+
+                    conteudoAcordeon[i].style.maxHeight = "0px";
+                } else {
+                    conteudoAcordeon.forEach(function (e) {
+                        e.classList.remove("ativo");
+                        e.style.maxHeight = "0px";
+                    });
+                    conteudoAcordeon[i].classList.add("ativo");
+                    conteudoAcordeon[i].style.maxHeight = conteudoAcordeon[i].scrollHeight + "px";
+                }
+
+            });
+        }
+    </script>
+
+</body>

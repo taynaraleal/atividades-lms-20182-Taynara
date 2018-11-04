@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'source sans pro';
+
+}
+
+header {
+    height: 50px;
+    width: 100vw;
+    background-color: aquamarine;
+    overflow: auto;
+}
+
+header h1 {
+    padding: 5px;
+    text-align: center;
+    color: black;
+}
+
+.menu-lateral {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    float: left;
+    background-color: aquamarine;
+    transition: transform 600ms;
+}
+
+.menu-lateral.ativo {
+    transform: translateX(0%);
+}
+
+.menu-lateral>ul {
+    list-style: none;
+}
+
+.menu-lateral>ul>li>a {
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.menu-lateral>ul>li>a:hover {
+    background-color: rgb(226, 226, 241);
+    color: white;
+}
+
+.menu-sanduiche {
+    display: none;
+    top: 0;
+    position: relative;
+    color: white;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    cursor: pointer;
+    border: none;
+    background-color: aquamarine;
+    outline: none;
+    user-select: none;
+}
+
+.menu-acordeon {
+    width: 280px;
+    margin-left: 200px;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 60px;
+}
+
+.itens {
+    display: block;
+    padding: 10px;
+    background-color: aquamarine;
+    font-size: 20px;
+    cursor: pointer;
+    color:black;
+    border-bottom: solid 2px rgb(230, 230, 230);
+}
+
+.itens:hover {
+    background-color: rgba(211, 207, 207, 0.63);
+    color: white;
+}
+
+.acordeon .conteudo {
+    width: 100%;
+    list-style: none;
+    overflow: hidden;
+    animation-direction: 0.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    max-height: 0;
+    transition: max-height 600ms;
+    padding: 0 10px;
+    display: block;
+    text-decoration: none;
+    background-color: #fafafa;
+    color: #333;
+}
+
+@keyframes abrir-acordeon {
+    from {
+        min-height: 0px;
+        max-height: 0px;
+    }
+    to {
+        min-height: 100px;
+        max-height: 100px;
+    }
+}
+
+@keyframes fechar-acordeon {
+    from {
+        min-height: 100px;
+        max-height: 100px;
+    }
+    to {
+        min-height: 0px;
+        max-height: 0px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .menu-lateral {
+        transform: translateX(-100%);
+        top: 0;
+    }
+    .menu-sanduiche {
+        display: block;
+    }
+    .menu-sanduiche .ativo {
+        padding: 0;
+        transform: translateX(150px);
+    }
+    header {
+        padding: 0;
+        transform: translateX(200px);
+    }
+    .menu-acordeon .ativo {
+        margin: 0;
+        padding: 10px;
+        transform: translateX(200px);
+    }
+}
