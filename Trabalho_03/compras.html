@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Minhas compras</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="trabalho03.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="index.html" class="navbar-brand">Grey's Store</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right" id="comLogin">
+                <li class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" id="nome"><i class="glyphicon glyphicon-user"></i>
+                        <span id="userEmail"></span><b class="caret"></b></a>
+                    <ul class="dropdown-menu" id="user_info">
+                        <li><a href="compras.html">Compras <i class="glyphicon glyphicon-list-alt pull-right"></i></a></li>
+                        <li class="divider"></li>
+                        <li><a id="logout">Sair <i class="glyphicon glyphicon-log-out pull-right"></i></a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" id="itens-card" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                        aria-expanded="false"> <span class="glyphicon glyphicon-shopping-cart"></span><span class="caret"></span></a>
+                    <ul class="dropdown-menu dropdown-cart" role="menu" id="dropdown-cart">
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Carrinho de compras</h2>
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <div class="panel-title">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5><span class="glyphicon glyphicon-shopping-cart"></span> Minhas compras</h5>
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="index.html" class="btn btn-primary btn-sm btn-block">
+                                        <span class="glyphicon glyphicon-share-alt"></span> Continuar comprando
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body" id="divItensFinalizarCompra">
+                    </div>
+                    <div class="panel-footer">
+                        <div class="row text-center">
+                            <div class="col-md-9">
+                                <h4 class="text-right">Total <strong id="total"></strong></h4>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-block" id="finalizar">
+                                    Finalizar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-12">
+                <h2>Compras Realizadas</h2>
+                <table class="table table-striped hide" id="tableCompras">
+                    <tr>
+                        <th>Data</th>
+                        <th>Hora</th>
+                        <th>Valor Total</th>
+                    </tr>
+                    <tbody id="divCompras">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="utils.js"></script>
+    <script src="finalizarCompra.js"></script>
+    <script src="carrinho.js"></script>
+    <script src="logout.js"></script>
+</body>
+
+</html>
